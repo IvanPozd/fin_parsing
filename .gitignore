@@ -2,3 +2,5 @@
 *.log
 work space
 fin_wit.py
+/env
+/__pycache__
