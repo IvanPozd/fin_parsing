@@ -1,6 +1,8 @@
+/env
+/__pycache__
+/env/lib/python3.9
 *.csv
 *.log
 work space
 fin_wit.py
-/env
-/__pycache__
+*.pyc
