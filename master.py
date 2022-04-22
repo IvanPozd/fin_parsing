@@ -13,3 +13,7 @@ def master():
     #main_wall()
     #additional_wall()
     print("Script time ", time.time() - start, " seconds")
+
+
+if __name__ == "__main__":
+    master()
