@@ -11,13 +11,13 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 def generate_html(url, retry=5):
     try:
-        proxy = {"https": "https://194.124.49.23:8000"}
         options = Options()
         options.headless = True
+        options.binary_location = r'/usr/share/applications/firefox.desktop'
         service = Service(executable_path=GeckoDriverManager().install())
         base_dir = os.path.join(os.path.dirname(__file__))
         browser = webdriver.Firefox(
-            executable_path=f"{base_dir}/geckodriver", options=options, service=service, proxy=proxy
+            executable_path=f"{base_dir}/geckodriver", options=options, service=service
         )
         browser.get(url)
         generated_html = browser.page_source
