@@ -13,7 +13,6 @@ def generate_html(url, retry=5):
     try:
         options = Options()
         options.headless = True
-        options.binary_location = r'/usr/share/applications/firefox.desktop'
         service = Service(executable_path=GeckoDriverManager().install())
         base_dir = os.path.join(os.path.dirname(__file__))
         browser = webdriver.Firefox(
