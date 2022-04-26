@@ -20,7 +20,7 @@ def main_most_recommended():
 
 
 def add_to_csv(array):
-    with open(f"most_recomended_{date.today()}.csv", "a", encoding="utf-8", newline="") as file:
+    with open(f"./output/most_recomended_{date.today()}.csv", "a", encoding="utf-8", newline="") as file:
         writer = csv.writer(file, delimiter=",")
         for page_data in array:
             if len(page_data) > 20:

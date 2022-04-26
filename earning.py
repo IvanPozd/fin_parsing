@@ -10,7 +10,7 @@ from selenium.common.exceptions import NoSuchElementException
 def main_earning():
     url = "https://www.finscreener.org/earnings/earnings-estimates?o=1013&pg="
     
-    with open(f"earning_est_{date.today()}.csv", "w", encoding="utf-8", newline="") as file:
+    with open(f"./output/earning_est_{date.today()}.csv", "w", encoding="utf-8", newline="") as file:
         fields = [
             "Date",
             "Ticker",
@@ -36,7 +36,7 @@ def main_earning():
 
 
 def add_to_csv(array):
-    with open(f"earning_est_{date.today()}.csv", "a", encoding="utf-8", newline="") as file:
+    with open(f"./output/earning_est_{date.today()}.csv", "a", encoding="utf-8", newline="") as file:
         writer = csv.writer(file, delimiter=",")
         for page_data in array:
             for company in page_data:

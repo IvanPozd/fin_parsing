@@ -42,7 +42,7 @@ def additional_wall():
 
 
 def add_to_csv(array):
-    with open(f"wall_street_stock_{date.today()}.csv", "a", encoding="utf-8", newline="") as file:
+    with open(f"./output/wall_street_stock_{date.today()}.csv", "a", encoding="utf-8", newline="") as file:
         writer = csv.writer(file, delimiter=",")
         for page in array:
             for block in page:
