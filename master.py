@@ -9,11 +9,10 @@ def master():
     start = time.time()
     
     main_earning()
-    
-    """main_fs_stock()
+    main_fs_stock()
     main_most_recommended()
     main_wall()
-    additional_wall()"""
+    additional_wall()
 
     print("Script time ", time.time() - start, " seconds")
 
